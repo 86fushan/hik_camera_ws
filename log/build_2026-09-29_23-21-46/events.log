@@ -1,0 +1,91 @@
+[0.000000] (-) TimerEvent: {}
+[0.000367] (hik_camera) JobQueued: {'identifier': 'hik_camera', 'dependencies': OrderedDict()}
+[0.000400] (hik_camera) JobStarted: {'identifier': 'hik_camera'}
+[0.007764] (hik_camera) JobProgress: {'identifier': 'hik_camera', 'progress': 'cmake'}
+[0.007801] (hik_camera) JobProgress: {'identifier': 'hik_camera', 'progress': 'build'}
+[0.007818] (hik_camera) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fushan/hik_camera_ws/build/hik_camera', '--', '-j14', '-l14'], 'cwd': '/home/fushan/hik_camera_ws/build/hik_camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'fushan'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:'), ('LESS', '-R'), ('HOME', '/home/fushan'), ('OLDPWD', '/home/fushan/hik_camera_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/fushan/.oh-my-zsh'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('SYSTEMD_EXEC_PID', '6192'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/fushan/hik_camera_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'fushan'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'fushan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '1'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/fushan-Bellator:@/tmp/.ICE-unix/3883,unix/fushan-Bellator:/tmp/.ICE-unix/3883'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f43b60e8_20c4_4a8d_9cf0_7b4d8957ec3b'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.124'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fushan/hik_camera_ws/install/hik_camera:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fushan/hik_camera_ws/build/hik_camera'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('MVCAM_SDK_VERSION', ''), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/fushan/hik_camera_ws/install/hik_camera:/opt/ros/humble'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib')]), 'shell': False}
+[0.062662] (hik_camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target hik_camera_node\x1b[0m\n'}
+[0.078405] (hik_camera) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/hik_camera_node.dir/src/hik_camera_node.cpp.o\x1b[0m\n'}
+[0.099369] (-) TimerEvent: {}
+[0.199859] (-) TimerEvent: {}
+[0.265563] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:170:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmissing terminating " character\n'}
+[0.265815] (hik_camera) StderrLine: {'line': b'  170 |                     \x1b[01;35m\x1b[K"\x1b[m\x1b[K[Device %u] Serial: %\n'}
+[0.265889] (hik_camera) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.265935] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:170:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunterminated argument list invoking macro "RCLCPP_INFO"\n'}
+[0.265979] (hik_camera) StderrLine: {'line': b'  170 |                     "[Device %u] Serial: %\n'}
+[0.266018] (hik_camera) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[0.300053] (-) TimerEvent: {}
+[0.400565] (-) TimerEvent: {}
+[0.500976] (-) TimerEvent: {}
+[0.601458] (-) TimerEvent: {}
+[0.701868] (-) TimerEvent: {}
+[0.802632] (-) TimerEvent: {}
+[0.903146] (-) TimerEvent: {}
+[1.003753] (-) TimerEvent: {}
+[1.104170] (-) TimerEvent: {}
+[1.204525] (-) TimerEvent: {}
+[1.304882] (-) TimerEvent: {}
+[1.405217] (-) TimerEvent: {}
+[1.505590] (-) TimerEvent: {}
+[1.605914] (-) TimerEvent: {}
+[1.706334] (-) TimerEvent: {}
+[1.806683] (-) TimerEvent: {}
+[1.860621] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[1.860825] (hik_camera) StderrLine: {'line': b'  168 |                 RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[K\n'}
+[1.860899] (hik_camera) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.860956] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:14:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.861005] (hik_camera) StderrLine: {'line': b'   14 | \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[1.861046] (hik_camera) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.869453] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KHikCameraNode::HikCameraNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.869612] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:25:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimage_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.869680] (hik_camera) StderrLine: {'line': b'   25 |         \x1b[01;31m\x1b[Kimage_pub_\x1b[m\x1b[K =\n'}
+[1.869734] (hik_camera) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.878662] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:54:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktimer_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.878843] (hik_camera) StderrLine: {'line': b'   54 |         \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K = this->create_wall_timer(\n'}
+[1.878900] (hik_camera) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.878945] (hik_camera) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ktimer_t\x1b[m\x1b[K\n'}
+[1.878987] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:57:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_callback\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[KHikCameraNode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.879031] (hik_camera) StderrLine: {'line': b'   57 |                 &HikCameraNode::\x1b[01;31m\x1b[Ktimer_callback\x1b[m\x1b[K,\n'}
+[1.879072] (hik_camera) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.886399] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:\x1b[m\x1b[K In destructor \xe2\x80\x98\x1b[01m\x1b[Kvirtual HikCameraNode::~HikCameraNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.886566] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:65:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstop_camera\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.886629] (hik_camera) StderrLine: {'line': b'   65 |         \x1b[01;31m\x1b[Kstop_camera\x1b[m\x1b[K();\n'}
+[1.886678] (hik_camera) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.895034] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool HikCameraNode::init_camera()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.895112] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.895167] (hik_camera) StderrLine: {'line': b'  168 |                 \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(\n'}
+[1.895208] (hik_camera) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.895247] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[1.895294] (hik_camera) StderrLine: {'line': b'  168 |                 RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[K\n'}
+[1.895334] (hik_camera) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.895373] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:159:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.895459] (hik_camera) StderrLine: {'line': b'  159 |             \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[1.895497] (hik_camera) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.895534] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[1.895575] (hik_camera) StderrLine: {'line': b'  168 |                 RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[K\n'}
+[1.895613] (hik_camera) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.895654] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:130:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.895696] (hik_camera) StderrLine: {'line': b'  130 |         \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[1.895738] (hik_camera) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.895777] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[1.895819] (hik_camera) StderrLine: {'line': b'  168 |                 RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[K\n'}
+[1.895857] (hik_camera) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.895895] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:74:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.895933] (hik_camera) StderrLine: {'line': b'   74 |     \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[1.895970] (hik_camera) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.896007] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:\x1b[m\x1b[K At global scope:\n'}
+[1.896048] (hik_camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id at end of input\n'}
+[1.896089] (hik_camera) StderrLine: {'line': b'  168 |                 RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[K\n'}
+[1.896127] (hik_camera) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.906771] (-) TimerEvent: {}
+[2.007143] (-) TimerEvent: {}
+[2.107484] (-) TimerEvent: {}
+[2.207804] (-) TimerEvent: {}
+[2.308132] (-) TimerEvent: {}
+[2.399937] (hik_camera) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/hik_camera_node.dir/build.make:76\xef\xbc\x9aCMakeFiles/hik_camera_node.dir/src/hik_camera_node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[2.400277] (hik_camera) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137\xef\xbc\x9aCMakeFiles/hik_camera_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[2.401841] (hik_camera) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[2.404711] (hik_camera) CommandEnded: {'returncode': 2}
+[2.408391] (-) TimerEvent: {}
+[2.413388] (hik_camera) JobEnded: {'identifier': 'hik_camera', 'rc': 2}
+[2.414447] (-) EventReactorShutdown: {}

@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target hik_camera_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/src/hik_camera_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable hik_camera_node[0m
+[100%] Built target hik_camera_node
+-- Install configuration: ""
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/lib/hik_camera/hik_camera_node
+-- Set runtime path of "/home/fushan/hik_camera_ws/install/hik_camera/lib/hik_camera/hik_camera_node" to "/opt/MVS/lib/64"
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/environment/path.sh
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/environment/path.dsv
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/local_setup.bash
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/local_setup.sh
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/local_setup.zsh
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/local_setup.dsv
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/package.dsv
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/ament_index/resource_index/packages/hik_camera
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake
+-- Installing: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/package.xml

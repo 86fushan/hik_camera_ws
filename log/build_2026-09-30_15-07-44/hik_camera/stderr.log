@@ -1,0 +1,4 @@
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:[m[K In member function ‘[01m[Kvoid HikCameraNode::timer_callback()[m[K’:
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:826:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfps_ret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  826 |         int [01;35m[Kfps_ret[m[K = MV_CC_GetFloatValue(
+      |             [01;35m[K^~~~~~~[m[K

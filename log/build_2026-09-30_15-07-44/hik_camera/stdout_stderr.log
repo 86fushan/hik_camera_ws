@@ -1,0 +1,25 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/src/hik_camera_node.cpp.o[0m
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:[m[K In member function ‘[01m[Kvoid HikCameraNode::timer_callback()[m[K’:
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:826:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfps_ret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  826 |         int [01;35m[Kfps_ret[m[K = MV_CC_GetFloatValue(
+      |             [01;35m[K^~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable hik_camera_node[0m
+[100%] Built target hik_camera_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/lib/hik_camera/hik_camera_node
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/environment/path.sh
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/environment/path.dsv
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/local_setup.bash
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/local_setup.sh
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/local_setup.zsh
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/local_setup.dsv
+-- Symlinking: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/package.dsv
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/ament_index/resource_index/packages/hik_camera
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake
+-- Up-to-date symlink: /home/fushan/hik_camera_ws/install/hik_camera/share/hik_camera/package.xml

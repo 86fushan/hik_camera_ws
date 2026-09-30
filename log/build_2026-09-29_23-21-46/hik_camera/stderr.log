@@ -1,0 +1,56 @@
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:170:21:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+  170 |                     [01;35m[K"[m[K[Device %u] Serial: %
+      |                     [01;35m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:170:43:[m[K [01;31m[Kerror: [m[Kunterminated argument list invoking macro "RCLCPP_INFO"
+  170 |                     "[Device %u] Serial: %
+      |                                           [01;31m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  168 |                 RCLCPP_INFO[01;31m[K([m[K
+      |                            [01;31m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:14:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   14 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:[m[K In constructor ‘[01m[KHikCameraNode::HikCameraNode()[m[K’:
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:25:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kimage_pub_[m[K’ was not declared in this scope
+   25 |         [01;31m[Kimage_pub_[m[K =
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:54:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   54 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:57:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_callback[m[K’ is not a member of ‘[01m[KHikCameraNode[m[K’
+   57 |                 &HikCameraNode::[01;31m[Ktimer_callback[m[K,
+      |                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:[m[K In destructor ‘[01m[Kvirtual HikCameraNode::~HikCameraNode()[m[K’:
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:65:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstop_camera[m[K’ was not declared in this scope
+   65 |         [01;31m[Kstop_camera[m[K();
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:[m[K In member function ‘[01m[Kbool HikCameraNode::init_camera()[m[K’:
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:17:[m[K [01;31m[Kerror: [m[K‘[01m[KRCLCPP_INFO[m[K’ was not declared in this scope
+  168 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  168 |                 RCLCPP_INFO[01;31m[K([m[K
+      |                            [01;31m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:159:13:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  159 |             [01;36m[K{[m[K
+      |             [01;36m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  168 |                 RCLCPP_INFO[01;31m[K([m[K
+      |                            [01;31m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:130:9:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  130 |         [01;36m[K{[m[K
+      |         [01;36m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  168 |                 RCLCPP_INFO[01;31m[K([m[K
+      |                            [01;31m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:74:5:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   74 |     [01;36m[K{[m[K
+      |     [01;36m[K^[m[K
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:[m[K At global scope:
+[01m[K/home/fushan/hik_camera_ws/src/hik_camera/src/hik_camera_node.cpp:168:28:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  168 |                 RCLCPP_INFO[01;31m[K([m[K
+      |                            [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/hik_camera_node.dir/build.make:76：CMakeFiles/hik_camera_node.dir/src/hik_camera_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/hik_camera_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

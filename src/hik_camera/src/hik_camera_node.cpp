@@ -1,6 +1,9 @@
 #include <chrono>
+#include <algorithm>
+#include <atomic>
 #include <memory>
 #include <iostream>
+#include <string>
 #include <vector>
 #include <cstring>
 #include <mutex>
@@ -187,6 +190,56 @@ public:
 
 private:
 
+    static std::string get_camera_serial(
+        const MV_CC_DEVICE_INFO& device_info)
+    {
+        const unsigned char* serial_number = nullptr;
+        size_t serial_number_capacity = 0;
+
+        if (device_info.nTLayerType == MV_USB_DEVICE)
+        {
+            serial_number =
+                device_info.SpecialInfo.stUsb3VInfo.chSerialNumber;
+            serial_number_capacity =
+                sizeof(device_info.SpecialInfo.stUsb3VInfo.chSerialNumber);
+        }
+        else if (device_info.nTLayerType == MV_GIGE_DEVICE)
+        {
+            serial_number =
+                device_info.SpecialInfo.stGigEInfo.chSerialNumber;
+            serial_number_capacity =
+                sizeof(device_info.SpecialInfo.stGigEInfo.chSerialNumber);
+        }
+
+        if (serial_number == nullptr)
+        {
+            return {};
+        }
+
+        const unsigned char* serial_end = std::find(
+            serial_number,
+            serial_number + serial_number_capacity,
+            '\0');
+
+        return std::string(
+            reinterpret_cast<const char*>(serial_number),
+            reinterpret_cast<const char*>(serial_end));
+    }
+
+    static void __stdcall reconnect_callback(
+        unsigned int nMsgType,
+        void* pUser)
+    {
+        if (nMsgType == MV_EXCEPTION_DEV_DISCONNECT && pUser != nullptr)
+        {
+            auto* node = static_cast<HikCameraNode*>(pUser);
+            node->reconnect_requested_.store(true);
+            RCLCPP_WARN(
+                node->get_logger(),
+                "Camera disconnected. Reconnect requested.");
+        }
+    }
+
     bool init_camera()
     {
         MV_CC_DEVICE_INFO_LIST device_list = {};
@@ -218,6 +271,12 @@ private:
 
         MV_CC_DEVICE_INFO* device_info =
             device_list.pDeviceInfo[0];
+
+        camera_serial_ = get_camera_serial(*device_info);
+        RCLCPP_INFO(
+            this->get_logger(),
+            "Camera serial number: %s",
+            camera_serial_.c_str());
 
         /*
          * 打印设备基本信息
@@ -355,7 +414,25 @@ private:
             return false;
         }
 
-        const int nRet = MV_CC_StartGrabbing(
+        int nRet = MV_CC_RegisterExceptionCallBack(
+            camera_handle_,
+            HikCameraNode::reconnect_callback,
+            this);
+
+        if (nRet != MV_OK)
+        {
+            RCLCPP_ERROR(
+                this->get_logger(),
+                "MV_CC_RegisterExceptionCallBack failed: 0x%x",
+                nRet);
+            return false;
+        }
+
+        RCLCPP_INFO(
+            this->get_logger(),
+            "Exception callback registered.");
+
+        nRet = MV_CC_StartGrabbing(
             camera_handle_);
 
         if (nRet != MV_OK)
@@ -374,6 +451,129 @@ private:
             "Camera grabbing started.");
 
         return true;
+    }
+
+    void reconnect_camera()
+    {
+        const auto now = std::chrono::steady_clock::now();
+        if (now < next_reconnect_attempt_)
+        {
+            return;
+        }
+
+        if (!reconnect_requested_.exchange(false))
+        {
+            return;
+        }
+
+        next_reconnect_attempt_ = now + 1s;
+
+        RCLCPP_WARN(
+            this->get_logger(),
+            "Camera disconnected; attempting to reconnect.");
+
+        stop_camera();
+
+        if (camera_serial_.empty())
+        {
+            RCLCPP_ERROR(
+                this->get_logger(),
+                "Cannot reconnect because the camera serial number is unavailable.");
+            reconnect_requested_.store(true);
+            return;
+        }
+
+        MV_CC_DEVICE_INFO_LIST device_list = {};
+        int nRet = MV_CC_EnumDevices(
+            MV_USB_DEVICE | MV_GIGE_DEVICE,
+            &device_list);
+
+        if (nRet != MV_OK)
+        {
+            RCLCPP_ERROR(
+                this->get_logger(),
+                "MV_CC_EnumDevices failed while reconnecting: 0x%x",
+                nRet);
+            reconnect_requested_.store(true);
+            return;
+        }
+
+        MV_CC_DEVICE_INFO* matching_device = nullptr;
+        for (unsigned int i = 0; i < device_list.nDeviceNum; ++i)
+        {
+            MV_CC_DEVICE_INFO* device_info = device_list.pDeviceInfo[i];
+            if (device_info != nullptr &&
+                get_camera_serial(*device_info) == camera_serial_)
+            {
+                matching_device = device_info;
+                break;
+            }
+        }
+
+        if (matching_device == nullptr)
+        {
+            RCLCPP_WARN(
+                this->get_logger(),
+                "Camera %s is not currently available.",
+                camera_serial_.c_str());
+            reconnect_requested_.store(true);
+            return;
+        }
+
+        nRet = MV_CC_CreateHandle(
+            &camera_handle_,
+            matching_device);
+
+        if (nRet != MV_OK)
+        {
+            RCLCPP_ERROR(
+                this->get_logger(),
+                "MV_CC_CreateHandle failed while reconnecting: 0x%x",
+                nRet);
+            camera_handle_ = nullptr;
+            reconnect_requested_.store(true);
+            return;
+        }
+
+        nRet = MV_CC_OpenDevice(camera_handle_);
+        if (nRet != MV_OK)
+        {
+            RCLCPP_ERROR(
+                this->get_logger(),
+                "MV_CC_OpenDevice failed while reconnecting: 0x%x",
+                nRet);
+            MV_CC_DestroyHandle(camera_handle_);
+            camera_handle_ = nullptr;
+            reconnect_requested_.store(true);
+            return;
+        }
+
+        const bool parameters_applied = set_camera_parameters(
+            this->get_parameter("exposure_time").as_double(),
+            this->get_parameter("gain").as_double(),
+            this->get_parameter("frame_rate").as_double(),
+            this->get_parameter("pixel_format").as_int());
+
+        if (!parameters_applied)
+        {
+            RCLCPP_WARN(
+                this->get_logger(),
+                "Some camera parameters failed to restore after reconnecting.");
+        }
+
+        if (!start_camera())
+        {
+            RCLCPP_ERROR(
+                this->get_logger(),
+                "Failed to start camera after reconnecting.");
+            stop_camera();
+            reconnect_requested_.store(true);
+            return;
+        }
+
+        RCLCPP_INFO(
+            this->get_logger(),
+            "Camera reconnected successfully.");
     }
 
     bool set_camera_parameters(
@@ -804,6 +1004,12 @@ private:
 
     void timer_callback()
     {
+        if (reconnect_requested_.load())
+        {
+            reconnect_camera();
+            return;
+        }
+
         if (camera_handle_ == nullptr || !grabbing_)
         {
             return;
@@ -952,6 +1158,12 @@ private:
     void* camera_handle_ = nullptr;
 
     bool grabbing_ = false;
+
+    std::atomic<bool> reconnect_requested_{false};
+
+    std::string camera_serial_;
+
+    std::chrono::steady_clock::time_point next_reconnect_attempt_{};
 
     rclcpp::Publisher<
         sensor_msgs::msg::Image>::SharedPtr image_pub_;

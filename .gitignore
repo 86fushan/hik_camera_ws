@@ -1,0 +1,87 @@
+# .gitignore
+# =========================================
+# ROS 2 / colcon generated files
+# =========================================
+
+# Workspace-level build artifacts
+/build/
+/install/
+/log/
+
+# Package-level build artifacts
+/src/hik_camera/build/
+/src/hik_camera/install/
+/src/hik_camera/log/
+
+# Colcon temporary/generated files
+/.colcon/
+.colcon/
+
+# =========================================
+# IDE / Editor
+# =========================================
+
+/.vscode/
+/.idea/
+
+# Vim / Nano / Emacs temporary files
+*.swp
+*.swo
+*~
+.#*
+
+# =========================================
+# Python cache
+# =========================================
+
+__pycache__/
+*.py[cod]
+
+# =========================================
+# CMake generated files
+# =========================================
+
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+
+# =========================================
+# OS generated files
+# =========================================
+
+.DS_Store
+Thumbs.db
+
+# =========================================
+# Temporary / backup files
+# =========================================
+
+*.tmp
+*.bak
+*.backup
+*.orig
+
+# =========================================
+# Logs
+# =========================================
+
+*.log
+
+# =========================================
+# ROS bag / recorded data
+# =========================================
+
+*.bag
+*.db3
+rosbag2_*/
+
+# =========================================
+# Local environment / secrets
+# =========================================
+
+.env
+.env.*

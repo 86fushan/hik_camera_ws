@@ -1,4 +1,0 @@
-Invoking command in '/home/fushan/hik_camera_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/fushan/hik_camera_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/fushan/hik_camera_ws/install/hik_camera
-Invoked command in '/home/fushan/hik_camera_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/fushan/hik_camera_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/fushan/hik_camera_ws/install/hik_camera
-Invoking command in '/home/fushan/hik_camera_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/fushan/hik_camera_ws/build/hik_camera -- -j14 -l14
-Invoked command in '/home/fushan/hik_camera_ws/build/hik_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/fushan/hik_camera_ws/build/hik_camera -- -j14 -l14
